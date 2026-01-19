@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marquis Website</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #2b1b12; /* deep brown */
+      color: #ffd9d0;
+      display: flex;
+      min-height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card {
+      width: min(900px, 92vw);
+      background: rgba(255, 255, 255, 0.06);
+      border: 2px solid #7a2e1a; /* brown-red */
+      border-radius: 18px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    }
+
+    h1 {
+      margin: 0 0 14px 0;
+      color: #ff3b30; /* red */
+      letter-spacing: 0.5px;
+    }
+
+    .marquis-wrap {
+      border: 2px solid #ff3b30; /* red border */
+      border-radius: 14px;
+      padding: 10px 0;
+      background: #3a2217; /* brown */
+      overflow: hidden;
+    }
+
+    /* Modern "marquee" animation */
+    .marquis {
+      display: inline-block;
+      white-space: nowrap;
+      padding-left: 100%;
+      animation: scroll 10s linear infinite;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .marquis .red { color: #ff3b30; }
+    .marquis .brown { color: #c07a5a; } /* light brown */
+
+    @keyframes scroll {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .hint {
+      margin-top: 14px;
+      font-size: 0.95rem;
+      color: #e8c3b6;
+      opacity: 0.9;
+      line-height: 1.4;
+    }
+
+    code {
+      background: rgba(255,255,255,0.08);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Marquis Website</h1>
+
+    <div class="marquis-wrap" aria-label="Scrolling marquee text">
+      <div class="marquis">
+        <span class="red">🔥 WELCOME 🔥</span>
+        <span class="brown"> — this is a marquis-style scrolling text in red and brown — </span>
+        <span class="red">STAY LIT</span>
+        <span class="brown"> — customize this text however you want — </span>
+      </div>
+    </div>
+
+    <div class="hint">
+      To view it: copy everything into a file named <code>index.html</code>, then open it in your browser.
+      (Or paste into any online HTML preview.)
+    </div>
+  </div>
+</body>
+</html>
